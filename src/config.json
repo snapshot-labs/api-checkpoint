@@ -1,0 +1,23 @@
+{
+  "network_node_url": "http://localhost:3001",
+  "sources": [
+    {
+      "contract": "0x1",
+      "start": 1,
+      "events": [
+        {
+          "name": "new_category",
+          "fn": "handleNewCategory"
+        },
+        {
+          "name": "new_discussion",
+          "fn": "handleNewDiscussion"
+        },
+        {
+          "name": "new_vote",
+          "fn": "handleNewVote"
+        }
+      ]
+    }
+  ]
+}

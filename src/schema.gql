@@ -1,0 +1,33 @@
+scalar Id
+scalar Text
+
+type Category {
+  id: String!
+  category_id: Int!
+  name: String
+  about: Text
+  parent: Int!
+  discussion_count: Int!
+  metadata_uri: String
+}
+
+type Discussion {
+  id: String!
+  discussion_id: Int
+  title: String
+  content: Text
+  category: Category
+  author: String
+  parent: Int
+  score: Float!
+  reply_count: Int!
+  vote_count: Int!
+  metadata_uri: String
+}
+
+type Vote {
+  id: String!
+  voter: String
+  discussion: Discussion
+  choice: Int
+}
